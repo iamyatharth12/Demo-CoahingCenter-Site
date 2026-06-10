@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog & Exam Updates | Apex Academy</title>
+    <meta name="description" content="Stay updated with the latest exam notifications, study tips, and current affairs from Apex Academy.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <style>
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .blog-card {
+            background-color: var(--secondary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease;
+        }
+        .blog-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(248, 250, 252, 0.2);
+        }
+        .blog-img-wrapper {
+            aspect-ratio: 16/9;
+            overflow: hidden;
+        }
+        .blog-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .blog-card:hover .blog-img-wrapper img {
+            transform: scale(1.05);
+        }
+        .blog-content {
+            padding: 2rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .blog-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+        .blog-tag {
+            color: var(--accent);
+            font-weight: 600;
+        }
+        .blog-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .blog-excerpt {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            flex: 1;
+        }
+        .blog-link {
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            margin-top: auto;
+        }
+        .blog-link:hover {
+            color: var(--accent);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Apex<span>.</span></a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="courses.html">Courses</a>
+                <a href="results.html">Results</a>
+                <a href="faculty.html">Faculty</a>
+                <a href="testimonials.html">Testimonials</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="blog.html" class="active">Blog</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <button class="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle dark/light mode">🌓</button>
+            <a href="admissions.html" class="btn-primary-sm">Apply Now</a>
+            <button class="nav-toggle" aria-label="Toggle menu"><span></span></button>
+        </div>
+    </nav>
+
+    <section class="page-hero">
+        <div class="breadcrumb"><a href="index.html">Home</a><span>/</span>Blog</div>
+        <h1>Updates & Insights.</h1>
+        <p>Stay ahead with the latest exam notifications, preparation strategies, and current affairs analysis.</p>
+    </section>
+
+    <section class="section-pad-dark" data-animate="fade-up">
+        <div class="blog-grid" data-animate="stagger-up">
+            
+            <a href="#" class="blog-card">
+                <div class="blog-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&q=80" alt="Notebooks">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="blog-tag">Exam Notification</span>
+                        <span>Oct 12, 2025</span>
+                    </div>
+                    <h3 class="blog-title">APSC CCE 2026 Notification Expected Dates</h3>
+                    <p class="blog-excerpt">The Assam Public Service Commission is expected to release the notification for CCE 2026 soon. Here is what you need to know to start your preparation early.</p>
+                    <span class="blog-link">Read Article →</span>
+                </div>
+            </a>
+
+            <a href="#" class="blog-card">
+                <div class="blog-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80" alt="Strategy planning">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="blog-tag">Study Tips</span>
+                        <span>Oct 05, 2025</span>
+                    </div>
+                    <h3 class="blog-title">How to crack SSC CGL in First Attempt</h3>
+                    <p class="blog-excerpt">A comprehensive 6-month strategy guide curated by our top faculty, focusing on high-weightage topics and mock test analysis.</p>
+                    <span class="blog-link">Read Article →</span>
+                </div>
+            </a>
+
+            <a href="#" class="blog-card">
+                <div class="blog-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=800&q=80" alt="News and current affairs">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="blog-tag">Current Affairs</span>
+                        <span>Sep 28, 2025</span>
+                    </div>
+                    <h3 class="blog-title">Weekly Current Affairs Roundup - September</h3>
+                    <p class="blog-excerpt">Download the free PDF covering the most important national and international events for the last week of September.</p>
+                    <span class="blog-link">Read Article →</span>
+                </div>
+            </a>
+
+            <a href="#" class="blog-card">
+                <div class="blog-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80" alt="Interview prep">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="blog-tag">Interview Prep</span>
+                        <span>Sep 15, 2025</span>
+                    </div>
+                    <h3 class="blog-title">Mastering the Banking PO Interview</h3>
+                    <p class="blog-excerpt">What do panel members look for? Learn the dos and don'ts of Bank PO interviews from ex-SBI Managers.</p>
+                    <span class="blog-link">Read Article →</span>
+                </div>
+            </a>
+
+            <a href="#" class="blog-card">
+                <div class="blog-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=800&q=80" alt="Success">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="blog-tag">Success Story</span>
+                        <span>Sep 02, 2025</span>
+                    </div>
+                    <h3 class="blog-title">From Private Job to Assam Civil Services</h3>
+                    <p class="blog-excerpt">Read the inspiring journey of an Apex student who balanced a full-time IT job to secure a top 50 rank in APSC.</p>
+                    <span class="blog-link">Read Article →</span>
+                </div>
+            </a>
+
+            <a href="#" class="blog-card">
+                <div class="blog-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1546410531-bea4d39838ce?w=800&q=80" alt="Admissions">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="blog-tag">Institute Update</span>
+                        <span>Aug 20, 2025</span>
+                    </div>
+                    <h3 class="blog-title">Admissions Open for Foundation Batch 2026</h3>
+                    <p class="blog-excerpt">Registrations are now live for our flagship 1-year foundation batches for SSC, Banking, and APSC. Early bird discounts available.</p>
+                    <span class="blog-link">Read Article →</span>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="logo">Apex<span>.</span></div>
+                <p>The trusted name in competitive exam coaching across Assam and the North East. Shaping futures since 1994.</p>
+                <p style="margin-top: 1rem; color: var(--text-muted); font-size: 0.875rem;">+91 98765 43210<br>admissions@apexacademy.in</p>
+            </div>
+            <div class="footer-links">
+                <h4>Explore</h4>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Institute</a>
+                <a href="courses.html">Programs</a>
+                <a href="results.html">Results</a>
+                <a href="faculty.html">Faculty</a>
+            </div>
+            <div class="footer-links">
+                <h4>More</h4>
+                <a href="testimonials.html">Testimonials</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="blog.html">Blog & Updates</a>
+                <a href="admissions.html">Admissions</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Apex Academy. All rights reserved. &nbsp;·&nbsp; Guwahati, Assam.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/919876543210" class="whatsapp-fab" aria-label="Chat on WhatsApp" target="_blank" rel="noopener">WA</a>
+    <script src="index.js"></script>
+</body>
+</html>

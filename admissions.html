@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admissions | Apex Academy</title>
+    <meta name="description" content="Begin your journey with Apex Academy. Admissions open for SSC, Banking, APSC, Railway, and Assam Police batches.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <style>
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+        .step-card {
+            background: var(--primary);
+            border: 1px solid var(--border);
+            padding: 2rem;
+            border-radius: 8px;
+            position: relative;
+        }
+        .step-num {
+            font-size: 3rem;
+            color: var(--accent);
+            opacity: 0.3;
+            font-family: var(--font-display);
+            font-weight: 700;
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            line-height: 1;
+        }
+        .step-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            margin-top: 1.5rem;
+        }
+        .step-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+            padding: 1.5rem 0;
+        }
+        .faq-question {
+            font-size: 1.25rem;
+            font-family: var(--font-display);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: var(--highlight);
+        }
+        .faq-answer {
+            color: var(--text-muted);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Apex<span>.</span></a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="courses.html">Courses</a>
+                <a href="results.html">Results</a>
+                <a href="faculty.html">Faculty</a>
+                <a href="testimonials.html">Testimonials</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <button class="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle dark/light mode">🌓</button>
+            <a href="admissions.html" class="btn-primary-sm active">Apply Now</a>
+            <button class="nav-toggle" aria-label="Toggle menu"><span></span></button>
+        </div>
+    </nav>
+
+    <section class="page-hero">
+        <div class="breadcrumb"><a href="index.html">Home</a><span>/</span>Admissions</div>
+        <h1>Your journey starts here.</h1>
+        <p>A seamless enrollment process designed to get you started on your preparation without delays. Connect with our counselors today.</p>
+    </section>
+
+    <!-- Unified Admissions Form Section from CSS -->
+    <section class="section-pad-dark" data-animate="fade-up">
+        <div class="admissions-container">
+            <div class="admissions-info">
+                <span class="eyebrow">Connect With Us</span>
+                <h2 class="section-title">Schedule a<br>Counseling Session.</h2>
+                <p class="section-desc">Not sure which course is right for you? Our expert academic counselors will analyze your profile and recommend the best path.</p>
+
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <div class="icon">WA</div>
+                        <div>
+                            <h4>WhatsApp a Counselor</h4>
+                            <p><a href="https://wa.me/919876543210" style="color: var(--accent);">+91 98765 43210</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <div class="icon">✉</div>
+                        <div>
+                            <h4>Email Admissions</h4>
+                            <p><a href="mailto:admissions@apexacademy.in" style="color: var(--accent);">admissions@apexacademy.in</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <div class="icon">☎</div>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p>+91 98765 43210</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="admissions-form">
+                <form id="admissionsInquiryForm" class="js-form">
+                    <h3>Request a Callback</h3>
+                    <div class="form-group">
+                        <label for="name">Student Name</label>
+                        <input type="text" id="name" required placeholder="Your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" required placeholder="+91 XXXXX XXXXX">
+                    </div>
+                    <div class="form-group">
+                        <label for="course">Interested Course</label>
+                        <select id="course" required>
+                            <option value="">Select a Program</option>
+                            <option value="ssc">SSC / Banking</option>
+                            <option value="apsc">APSC</option>
+                            <option value="railway">Railway</option>
+                            <option value="assam-police">Assam Police</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-submit">Submit Inquiry</button>
+                    <p class="form-note">A senior academic counselor will contact you within 24 hours.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admission Process -->
+    <section class="section-pad" data-animate="fade-up">
+        <div class="section-header" style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <span class="eyebrow">How it works</span>
+            <h2 class="section-title">The Admission Process.</h2>
+        </div>
+        <div class="process-steps" data-animate="stagger-up">
+            <div class="step-card">
+                <div class="step-num">01</div>
+                <h3>Counseling</h3>
+                <p>Speak to our academic counselors to understand the syllabus, exam patterns, and choose the right batch timings.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">02</div>
+                <h3>Registration</h3>
+                <p>Complete the enrollment form online or at our branch. Submit necessary documents (ID proof, passport photo).</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">03</div>
+                <h3>Fee Payment</h3>
+                <p>Pay the admission fee via UPI, Card, or Net Banking. Installment options are available for long-term courses.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">04</div>
+                <h3>Onboarding</h3>
+                <p>Receive your welcome kit, study materials, ID card, and access to the online student portal.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs -->
+    <section class="section-pad-dark" data-animate="fade-up">
+        <div class="section-header" style="text-align: center;">
+            <span class="eyebrow">Common Queries</span>
+            <h2 class="section-title">Frequently Asked Questions</h2>
+        </div>
+        <div class="faq-container" data-animate="stagger-up">
+            <div class="faq-item">
+                <div class="faq-question">Are the study materials provided?</div>
+                <div class="faq-answer">Yes, comprehensive study materials designed by our expert faculty are included in the course fee. These include concept books, practice workbooks, and current affairs magazines.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Can I pay the fees in installments?</div>
+                <div class="faq-answer">Yes, we offer flexible installment plans for our year-long foundation batches. Short-term crash courses usually require one-time payment.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Do you offer hostel facilities?</div>
+                <div class="faq-answer">While we don't have our own hostels, we have tie-ups with verified, safe PGs and hostels within walking distance of our campus for outstation students.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">What if I miss a class?</div>
+                <div class="faq-answer">Students can access recorded backup classes through the student portal, or attend a doubt-clearing session over the weekend.</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="logo">Apex<span>.</span></div>
+                <p>The trusted name in competitive exam coaching across Assam and the North East. Shaping futures since 1994.</p>
+                <p style="margin-top: 1rem; color: var(--text-muted); font-size: 0.875rem;">+91 98765 43210<br>admissions@apexacademy.in</p>
+            </div>
+            <div class="footer-links">
+                <h4>Explore</h4>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Institute</a>
+                <a href="courses.html">Programs</a>
+                <a href="results.html">Results</a>
+                <a href="faculty.html">Faculty</a>
+            </div>
+            <div class="footer-links">
+                <h4>More</h4>
+                <a href="testimonials.html">Testimonials</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="blog.html">Blog & Updates</a>
+                <a href="admissions.html">Admissions</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Apex Academy. All rights reserved. &nbsp;·&nbsp; Guwahati, Assam.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/919876543210" class="whatsapp-fab" aria-label="Chat on WhatsApp" target="_blank" rel="noopener">WA</a>
+    <script src="index.js"></script>
+</body>
+</html>
